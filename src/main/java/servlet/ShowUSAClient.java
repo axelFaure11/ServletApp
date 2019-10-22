@@ -41,7 +41,7 @@ public class ShowUSAClient extends HttpServlet {
             out.println("<body>");
             
             try {
-                String val = request.getParameter("state");
+                String val = request.getParameter("state_name");
                 if(val == null){
                     throw new Exception();
                 }
