@@ -36,7 +36,7 @@ public class StateForm extends HttpServlet{
             out.println("<option value='CA'>CA</option>");
             out.println("<option value='TX'>TX</option>");
             out.println("</select>");
-            out.println("<input type='submit' value='Submit'>");
+            out.println("<input type='submit' value='state_name'>");
             out.println("</form>");
         } 
     }
