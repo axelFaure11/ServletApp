@@ -31,12 +31,12 @@ public class StateForm extends HttpServlet{
             out.println("</head>");
             out.println("<body>");
             
-            out.println("<form method='POST' action='ShowUSAClient?state=' onsubmit='SetData()'>");
-            out.println("<select name='StateList'>");
+            out.println("<form method='POST' action='ShowUSAClient?state=state_name'>");
+            out.println("<select name='state_name' required>");
             out.println("<option value='CA'>CA</option>");
             out.println("<option value='TX'>TX</option>");
             out.println("</select>");
-            out.println("<input type='submit'>");
+            out.println("<input type='submit' value='Submit'>");
             out.println("</form>");
         } 
     }
