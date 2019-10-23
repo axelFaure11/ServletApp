@@ -41,17 +41,18 @@ public class ShowUSAClient extends HttpServlet {
             out.println("<body>");
             
             try {
-                String val = request.getParameter("state_name");
+                String val = request.getParameter("state");
                 if(val == null){
                     throw new Exception();
                 }
                 
                 DAO dao = new DAO(DataSourceFactory.getDataSource());
                 List<CustomerEntity> listeclient = dao.customersInState(val);
+                System.out.println(val);
                 out.println("<table>");
                 out.println("<tbody>");
                 out.println("<tr><td><br>ID</br></td><td><br>Name</br></td><td><br>Address</br></td></tr>");
-                for(CustomerEntity client : listeclient ){
+                for(CustomerEntity client : listeclient){
                     out.println("<tr>");
                     out.println("<td>" + client.getCustomerId() + "</td>");
                     out.println("<td>" + client.getName() + "</td>");
